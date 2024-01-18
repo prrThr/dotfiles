@@ -9,6 +9,7 @@ fi
 # Cria links simbólicos para os arquivos de configuração
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/nvim ~/.config/
 
 # Verifica se o diretório ~/.config/ranger existe
 if [ ! -d ~/.config/ranger ]; then
