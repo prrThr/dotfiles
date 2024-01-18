@@ -12,5 +12,9 @@ return {
     vim.cmd[[ hi StatusLine guibg=NONE ctermbg=NONE ]]
     vim.cmd[[ hi StatusLineNC guibg=NONE ctermbg=NONE ]]
     vim.cmd[[ hi NormalNC guibg=NONE ctermbg=NONE ]]
+
+    vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#51B3EC', bold=true })
+    vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
+    vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#FB508F', bold=true })
   end
 }
