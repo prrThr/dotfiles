@@ -43,3 +43,30 @@ map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
 map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
 map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
+-- ---------------- TELESCOPE ---------------- --
+map('n', '<C-p>', '<Cmd>Telescope find_files<CR>', opts)
+map('n', '<leader>fg', '<Cmd>Telescope live_grep<CR>', opts)
+
+-- ---------------- NEO-TREE  ---------------- --
+vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
+
+-- ---------------- LSP  ---------------- --
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+vim.keymap.set({'n'}, '<leader>ca', vim.lsp.buf.code_action, {})
+vim.keymap.set('n', ']g', vim.diagnostic.goto_next)
+vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
+
+-- ---------------- TOGGLETERM ---------------- --
+map('n', '<C-\\>', '<Cmd>ToggleTerm<CR>', opts)
+
+-- ---------------- NEOSCROLL ---------------- --
+map('n', '<C-u>', '<Cmd>lua require("neoscroll").scroll(-vim.wo.scroll, true, 250)<CR>', opts)
+map('n', '<C-d>', '<Cmd>lua require("neoscroll").scroll(vim.wo.scroll, true, 250)<CR>', opts)
+map('n', '<C-b>', '<Cmd>lua require("neoscroll").scroll(-vim.api.nvim_win_get_height(0), true, 450)<CR>', opts)
+map('n', '<C-f>', '<Cmd>lua require("neoscroll").scroll(vim.api.nvim_win_get_height(0), true, 450)<CR>', opts)
+map('n', '<C-y>', '<Cmd>lua require("neoscroll").scroll(-0.10, false, 100)<CR>', opts)
+map('n', '<C-e>', '<Cmd>lua require("neoscroll").scroll(0.10, false, 100)<CR>', opts)
+map('n', 'zt', '<Cmd>lua require("neoscroll").zt(250)<CR>', opts)
+map('n', 'zz', '<Cmd>lua require("neoscroll").zz(250)<CR>', opts)
+map('n', 'zb', '<Cmd>lua require("neoscroll").zb(250)<CR>', opts)
