@@ -4,6 +4,7 @@ return {
   opts = {--[[ things you want to change go here]]},
   config = function()
     require'toggleterm'.setup{
+      open_mapping = [[<C-\>]],
       size = 20,
       shade_filetypes = {},
       shade_terminals = true,
