@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-  export ZSH=~/.oh-my-zsh
+export XDG_CONFIG_HOME="$HOME/.config"
+export ZSH=~/.oh-my-zsh
 
 # Liked themes (already installed)
 # af-magic,af-magic2 (my customized theme), kennethreitz, kphoen, mortalscumbag, murilasso 
@@ -85,4 +85,16 @@ fi
 # For a full list of active aliases, run `alias`.
 
 # My custom aliases and scripts
-source ~/my_zsh_config.zsh
+source ~/zsh_aliases.zsh
+
+export VISUAL=nvim
+export EDITOR=nvim
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}

@@ -58,7 +58,7 @@ vim.keymap.set('n', ']g', vim.diagnostic.goto_next)
 vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
 
 -- ---------------- TOGGLETERM ---------------- --
--- map('n', '<C-\\>', '<Cmd>ToggleTerm<CR>', opts)
+map('n', '<C-\\>', '<Cmd>ToggleTerm<CR>', opts)
 
 -- ---------------- NEOSCROLL ---------------- --
 map('n', '<C-u>', '<Cmd>lua require("neoscroll").scroll(-vim.wo.scroll, true, 250)<CR>', opts)
