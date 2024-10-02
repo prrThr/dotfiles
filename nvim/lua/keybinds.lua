@@ -2,8 +2,6 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-
-
 -- ---------------- BARBAR ---------------- --
 -- Move to previous/next
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
@@ -48,7 +46,8 @@ map('n', '<C-p>', '<Cmd>Telescope find_files<CR>', opts)
 map('n', '<leader>fg', '<Cmd>Telescope live_grep<CR>', opts)
 
 -- ---------------- NEO-TREE  ---------------- --
-vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
+-- vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
+vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>', {})
 
 -- ---------------- LSP  ---------------- --
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
@@ -61,12 +60,32 @@ vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
 map('n', '<C-\\>', '<Cmd>ToggleTerm<CR>', opts)
 
 -- ---------------- NEOSCROLL ---------------- --
-map('n', '<C-u>', '<Cmd>lua require("neoscroll").scroll(-vim.wo.scroll, true, 250)<CR>', opts)
-map('n', '<C-d>', '<Cmd>lua require("neoscroll").scroll(vim.wo.scroll, true, 250)<CR>', opts)
-map('n', '<C-b>', '<Cmd>lua require("neoscroll").scroll(-vim.api.nvim_win_get_height(0), true, 450)<CR>', opts)
-map('n', '<C-f>', '<Cmd>lua require("neoscroll").scroll(vim.api.nvim_win_get_height(0), true, 450)<CR>', opts)
-map('n', '<C-y>', '<Cmd>lua require("neoscroll").scroll(-0.10, false, 100)<CR>', opts)
-map('n', '<C-e>', '<Cmd>lua require("neoscroll").scroll(0.10, false, 100)<CR>', opts)
-map('n', 'zt', '<Cmd>lua require("neoscroll").zt(250)<CR>', opts)
-map('n', 'zz', '<Cmd>lua require("neoscroll").zz(250)<CR>', opts)
-map('n', 'zb', '<Cmd>lua require("neoscroll").zb(250)<CR>', opts)
+local neoscroll = require('neoscroll')
+
+local keymap = {
+  ["<C-u>"] = function() neoscroll.ctrl_u({ duration = 250 }) end,
+  ["<C-d>"] = function() neoscroll.ctrl_d({ duration = 250 }) end,
+  ["<C-b>"] = function() neoscroll.ctrl_b({ duration = 450 }) end,
+  ["<C-f>"] = function() neoscroll.ctrl_f({ duration = 450 }) end,
+  ["<C-y>"] = function() neoscroll.scroll(-0.1, { move_cursor = false, duration = 100 }) end,
+  ["<C-e>"] = function() neoscroll.scroll(0.1, { move_cursor = false, duration = 100 }) end,
+  ["zt"]    = function() neoscroll.zt({ half_win_duration = 250 }) end,
+  ["zz"]    = function() neoscroll.zz({ half_win_duration = 250 }) end,
+  ["zb"]    = function() neoscroll.zb({ half_win_duration = 250 }) end,
+}
+
+local modes = { 'n', 'v', 'x' }
+for key, func in pairs(keymap) do
+  vim.keymap.set(modes, key, func)
+end
+
+-- ---------------- NEOSCROLL DEPRECATED ----- --
+--map('n', '<C-u>', '<Cmd>lua require("neoscroll").scroll(-vim.wo.scroll, true, 250)<CR>', opts)
+--map('n', '<C-d>', '<Cmd>lua require("neoscroll").scroll(vim.wo.scroll, true, 250)<CR>', opts)
+--map('n', '<C-b>', '<Cmd>lua require("neoscroll").scroll(-vim.api.nvim_win_get_height(0), true, 450)<CR>', opts)
+--map('n', '<C-f>', '<Cmd>lua require("neoscroll").scroll(vim.api.nvim_win_get_height(0), true, 450)<CR>', opts)
+--map('n', '<C-y>', '<Cmd>lua require("neoscroll").scroll(-0.10, false, 100)<CR>', opts)
+--map('n', '<C-e>', '<Cmd>lua require("neoscroll").scroll(0.10, false, 100)<CR>', opts)
+--map('n', 'zt', '<Cmd>lua require("neoscroll").zt(250)<CR>', opts)
+--map('n', 'zz', '<Cmd>lua require("neoscroll").zz(250)<CR>', opts)
+--map('n', 'zb', '<Cmd>lua require("neoscroll").zb(250)<CR>', opts)
