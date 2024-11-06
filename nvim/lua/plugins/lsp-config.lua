@@ -61,6 +61,7 @@ return {
       })
 
       lspconfig.pyright.setup({
+        handlers = handlers,
         capabilities = capabilities,
         filetypes = { "python" },
         settings = {
@@ -73,7 +74,12 @@ return {
 
 
       lspconfig.clangd.setup({})
-      lspconfig.bashls.setup({})
+
+      lspconfig.bashls.setup({
+        handlers = handlers,
+        capabilities = capabilities,
+        filetypes = { "sh" }
+      })
     end
   }
 }
