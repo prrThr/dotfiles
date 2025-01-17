@@ -26,8 +26,10 @@ $ stow .
 ## KDE things
 
 ### Konsole
-Konsole themes are located in .local/share/konsole
+Konsole themes are located in `.local/share/konsole`
+
 More information in the [GitHub repository](https://github.com/catppuccin/konsole)
+
 After executing `stow .` do the next:
 1. Reload Konsole
 2. Navigate to `Settings > Manage Profiles` then click **New**
