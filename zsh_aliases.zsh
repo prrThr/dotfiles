@@ -59,7 +59,9 @@ alias desktop1='cd $home/.local/share/applications'
 alias desktop2='cd /usr/share/applications'
 alias desktop3='cd /var/lib/flatpak/exports/share/applications'
 
-alias firefox_profile='cd $home/.mozilla/firefox/jb7zoxzy.default-release/chrome'
+alias firefox_profile='cd $home/.mozilla/firefox/3epnso9j.default-release/chrome'
+alias thunderbird_profile='cd $home/.thunderbird/pnb4jl36.default-esr'
+alias qbit_settings='cd $home//.var/app/org.qbittorrent.qBittorrent/data/qBittorrent'
 
 alias trs='cd $home/Torrents; yazi'
 
