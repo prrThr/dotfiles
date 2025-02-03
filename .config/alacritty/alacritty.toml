@@ -14,19 +14,19 @@ padding.y = 10
 size = 12
 
 [font.bold]
-family = "JetBrainsMonoNL"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMonoNL"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMonoNL"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMonoNL"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Regular"
 
 # -----------------------------------------------------#
