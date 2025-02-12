@@ -61,3 +61,14 @@ eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 
+# Scripts
+
+top_filter() {
+    if [ -z "$1" ]; then
+        echo "Parameter needed"
+    else
+        top -c -p $(pgrep -d',' -f "$1")
+    fi
+}
+
+
