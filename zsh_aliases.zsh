@@ -70,6 +70,8 @@ alias yazicfg='cd ~/.config/yazi; nvim'
 
 alias play_movie='~/Scripts/play_video_with_sub.sh'
 
+alias vim='nvim'
+
 # alias inútil, só apertar gc -> c
 # alias ydf='cd $home/.config/; yazi'
 

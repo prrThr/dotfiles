@@ -29,6 +29,9 @@ style = "Italic"
 family = "JetBrainsMonoNL Nerd Font"
 style = "Regular"
 
+[keyboard]
+bindings = [{key = "Enter", mods = "Alt", action = "ToggleFullscreen"}]
+
 [general]
 import = [
     #"~/.config/alacritty/themes/themes/breeze.toml"

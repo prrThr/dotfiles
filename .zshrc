@@ -10,7 +10,7 @@ export LC_ALL=en_US.UTF-8 perl
 
 # Liked themes (already installed)
 # af-magic,af-magic2 (my customized theme), kennethreitz, kphoen, mortalscumbag, murilasso
-ZSH_THEME="af-magic2"
+ZSH_THEME="af-magic-no-right"
 
 HIST_STAMPS="dd.mm.yyyy"
 
@@ -71,4 +71,8 @@ top_filter() {
     fi
 }
 
+
+if command -v tmux &>/dev/null && ! tmux has-session -t main 2>/dev/null; then
+  tmux new-session -s main
+fi
 
