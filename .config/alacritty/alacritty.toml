@@ -11,22 +11,22 @@ padding.x = 10
 padding.y = 10
 
 [font]
-size = 14
+size = 16
 
 [font.bold]
-family = "JetBrainsMonoNL Nerd Font"
+family = "Iosevka Term"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMonoNL Nerd Font"
+family = "Iosevka Term"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMonoNL Nerd Font"
+family = "Iosevka Term"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMonoNL Nerd Font"
+family = "Iosevka Term"
 style = "Regular"
 
 [keyboard]
@@ -35,5 +35,6 @@ bindings = [{key = "Enter", mods = "Alt", action = "ToggleFullscreen"}]
 [general]
 import = [
     #"~/.config/alacritty/themes/themes/breeze.toml"
-    "~/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml"
+    #"~/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml"
+    "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
 ]

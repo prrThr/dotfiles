@@ -3,7 +3,7 @@ return {
     lazy = false,
     name = "catppuccin",
     priority = 1000,
-    enabled = false, -- Disable theme
+    enabled = true, -- Disable theme
     config = function()
         require("catppuccin").setup({
             flavour = "mocha", -- latte, frappe, macchiato, mocha

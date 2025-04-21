@@ -72,6 +72,16 @@ alias play_movie='~/Scripts/play_video_with_sub.sh'
 
 alias vim='nvim'
 
+alias ddf='df -h | head -1 ; df -h | grep "/dev/"'
+
+alias todo='vim ~/Desktop/todo.md'
+
+# New media backend
+alias zref='sudo env ZYPP_CURL2=1 zypper ref'
+# Parallel downloads
+alias zdup='sudo env ZYPP_PCK_PRELOAD=1 zypper dup'
+
+
 # alias inútil, só apertar gc -> c
 # alias ydf='cd $home/.config/; yazi'
 

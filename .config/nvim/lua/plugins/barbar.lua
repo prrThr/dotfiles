@@ -5,8 +5,8 @@ return {
   },
   config = function()
     vim.g.barbar_auto_setup = false
+    vim.o.showtabline = 0 -- Starts neovim with bars hidden
 
-    -- Função para alternar a visibilidade da linha de abas
     function ToggleBarbar()
       local showtabline = vim.o.showtabline
       if showtabline == 2 then
@@ -16,9 +16,9 @@ return {
       end
     end
 
-    -- Mapeando a combinação de teclas Alt+T para alternar a linha de abas
     vim.keymap.set('n', '<A-t>', ToggleBarbar, { noremap = true, silent = true })
   end,
+
   opts = {
     -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
     -- animation = true,
