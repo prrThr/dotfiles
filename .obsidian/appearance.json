@@ -1,0 +1,11 @@
+{
+  "cssTheme": "Catppuccin",
+  "accentColor": "#4157fb",
+  "interfaceFontFamily": "",
+  "textFontFamily": "JetBrainsMono Nerd Font",
+  "showViewHeader": false,
+  "theme": "system",
+  "monospaceFontFamily": "Iosevka Term",
+  "baseFontSizeAction": true,
+  "baseFontSize": 19
+}
