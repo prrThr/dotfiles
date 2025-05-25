@@ -5,7 +5,7 @@ return {
   },
   config = function()
     vim.g.barbar_auto_setup = false
-    vim.o.showtabline = 0 -- Starts neovim with bars hidden
+    vim.o.showtabline = 2 -- Starts neovim with bars hidden
 
     function ToggleBarbar()
       local showtabline = vim.o.showtabline

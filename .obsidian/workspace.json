@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "Computação_Gráfica.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d0901c0617a12745",
@@ -165,9 +166,19 @@
               "icon": "lucide-list",
               "title": "Outline of sist_distrib"
             }
+          },
+          {
+            "id": "5f5f948a849a040a",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -176,6 +187,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -186,7 +198,6 @@
   },
   "active": "16ef5b60667f96c4",
   "lastOpenFiles": [
-    "teste.md",
     "Computação_Gráfica.md",
     "como_rodar_lwjgl.md",
     "sistemas-distribuidos/Livros/Understanding_Distributed_Systems.pdf",
@@ -218,6 +229,7 @@
     "Clientes/hosts_PCAL.md",
     "Clientes/zabbix_brigada.md",
     "Digitro/migracao_GCP_OCI.md",
+    "Clientes/unimed.md",
     "Logs",
     "4913"
   ]
