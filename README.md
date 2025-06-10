@@ -1,14 +1,25 @@
 ## Requirements
 
-### Git
+### System packages
 ```
-sudo zypper in git
+sudo apt install git stow alacritty tmux bat glow htop
 ```
 
-### Stow
-```
-sudo zypper in stow
-```
+### Appimages
+- [Obsidian](https://obsidian.md/download)
+- [Neovim](https://github.com/neovim/neovim/releases)
+
+### Flatpaks
+- Discord `com.discordapp.Discord`
+- OBS `com.obsproject.Studio`
+- Firefox `org.mozilla.firefox`
+
+### Others
+- [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) (.tar.gz)
+- [Zoxide](https://github.com/ajeetdsouza/zoxide) (script)
+- [Node/npm](https://nodejs.org/en/download) (script)
+- [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#installation) (git clone)
+- [tldr](https://tldr.sh/) (npm)
 
 ## Installation
 
@@ -16,27 +27,11 @@ First, clone the dotfiles repository to the $HOME directory using git
 ```
 $ git clone git@github.com:prrThr/dotfiles.git
 $ cd dotfiles
+$ git branch mint
 ```
 
 then, use GNU stow inside the `~/dotfiles` directory to create symlinks
 ```
 $ stow .
 ```
-
-## KDE things
-
-### Konsole
-Konsole themes are located in `.local/share/konsole`
-
-More information in the [GitHub repository](https://github.com/catppuccin/konsole)
-
-After executing `stow .` do the next:
-1. Reload Konsole
-2. Navigate to `Settings > Manage Profiles` then click **New**
-3. Check Default Profile 
-4. Open the **Appearence** tab and select one of the themes
-5. Click **Apply** then **OK**
-
-### Yakuake
-Folow the steps on the [GitHub repository](https://github.com/catppuccin/yakuake)
 
