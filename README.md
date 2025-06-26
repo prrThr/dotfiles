@@ -1,14 +1,30 @@
 ## Requirements
 
-### Git
+### System packages
 ```
-sudo zypper in git
+sudo zypper in alacritty bat fzf git glow htop stow tmux zoxide
 ```
 
-### Stow
-```
-sudo zypper in stow
-```
+### Appimages
+- [Obsidian](https://obsidian.md/download)
+- [Insomnia](https://docs.insomnia.rest/insomnia/install)
+
+### Flatpaks
+- Discord `com.discordapp.Discord`
+- OBS `com.obsproject.Studio`
+- Firefox `org.mozilla.firefox`
+- Spotify `com.spotify.Client`
+- GIMP `org.gimp.GIMP`
+- Inkscape `org.inkscape.Inkscape`
+- Thunderbird `org.mozilla.Thunderbird`
+- qBittorrent `org.qbittorrent.qBittorrent`
+- Scilab `org.scilab.Scilab`
+
+### Others
+- [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) (.tar.gz)
+- [Node/npm](https://nodejs.org/en/download) (script)
+- [tldr](https://tldr.sh/) (npm)
+
 
 ## Installation
 

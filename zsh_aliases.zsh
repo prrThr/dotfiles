@@ -81,6 +81,7 @@ alias zref='sudo env ZYPP_CURL2=1 zypper ref'
 # Parallel downloads
 alias zdup='sudo env ZYPP_PCK_PRELOAD=1 zypper dup'
 
+alias script='/home/thr/Scripts/run_script.sh'
 
 # alias inútil, só apertar gc -> c
 # alias ydf='cd $home/.config/; yazi'
