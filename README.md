@@ -2,7 +2,7 @@
 
 ### System packages
 ```
-sudo zypper in alacritty bat fzf git glow htop stow tmux zoxide
+sudo zypper in alacritty bat fastfetch fzf git glow htop mpv stow tmux zoxide
 ```
 
 ### Appimages
