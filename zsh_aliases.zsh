@@ -44,7 +44,7 @@ alias vimCommands'?'="$show $scripts/vimCommands.md"
 alias ranger'?'="$show $scripts/rangerCommands.md"
 
 # Vaguitas emprego pls
-alias contasVagas="$show ~/Documents/Work/ContasVagas.md"
+alias contasVagas="bat ~/Documents/Work/ContasVagas.md"
 alias adicionarVaga="$edit ~/Documents/Work/ContasVagas.md"
 
 # Show how chmod works
@@ -85,6 +85,8 @@ alias zref='sudo env ZYPP_CURL2=1 zypper ref'
 alias zdup='sudo env ZYPP_PCK_PRELOAD=1 zypper dup'
 
 alias script='/home/thr/Scripts/run_script.sh'
+
+alias check_hashes='/home/thr/Scripts/check_hashes.sh'
 
 # alias inútil, só apertar gc -> c
 # alias ydf='cd $home/.config/; yazi'
