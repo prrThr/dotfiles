@@ -1,15 +1,19 @@
-home=$HOME
+## TODO
+# Falta corrigir o diretório de anotações
+
 ### Settings ----------------------------------------------------------------------------
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 
 ### Scripts ------------------------------------------------------------------------------
-# Change KDE theme
-alias toDark=$home/Scripts/change_theme/./toDark.sh
-alias toLight=$home/Scripts/change_theme/./toLight.sh
 
-### Automations --------------------------------------------------------------------------
+# Change KDE theme
+alias toDark=$HOME/Scripts/change_theme/./toDark.sh
+alias toLight=$HOME/Scripts/change_theme/./toLight.sh
+
+# LAN server
+alias run_server="~/Scripts/private_server.sh"
 
 #-----------------------------------------------------------------------------------------
 
@@ -17,8 +21,6 @@ alias toLight=$home/Scripts/change_theme/./toLight.sh
 
 scripts=~/Documents/terminalThings
 edit=nvim
-
-#show=bat
 show="glow -p"
 
 # Copy actual path to clipboard
@@ -40,9 +42,6 @@ alias wifi'?'="$scripts/wifiInfos.sh"
 # Show essentials vim commands
 alias vimCommands'?'="$show $scripts/vimCommands.md"
 
-# Show Ranger commands
-alias ranger'?'="$show $scripts/rangerCommands.md"
-
 # Vaguitas emprego pls
 alias contasVagas="bat ~/Documents/Work/ContasVagas.md"
 alias adicionarVaga="$edit ~/Documents/Work/ContasVagas.md"
@@ -55,44 +54,19 @@ alias notes="$show ~/Documents/Notes/notes.md"
 # Edit notes
 alias editNotes="nvim ~/Documents/Notes/notes.md"
 
-# Close ranger on actual location
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-
-alias desktop1='cd $home/.local/share/applications'
+alias desktop1='cd $HOME/.local/share/applications'
 alias desktop2='cd /usr/share/applications'
 alias desktop3='cd /var/lib/flatpak/exports/share/applications'
 
-alias firefox_profile='cd $home/.mozilla/firefox/3epnso9j.default-release/chrome'
-alias thunderbird_profile='cd $home/.thunderbird/pnb4jl36.default-esr'
-alias qbit_settings='cd $home//.var/app/org.qbittorrent.qBittorrent/data/qBittorrent'
-
-alias trs='cd $home/Torrents; yazi'
-
-alias nvimcfg='cd ~/.config/nvim; nvim'
-alias yazicfg='cd ~/.config/yazi; nvim'
+alias firefox_profile='cd $HOME/.mozilla/firefox/3epnso9j.default-release/chrome'
+alias thunderbird_profile='cd $HOME/.thunderbird/pnb4jl36.default-esr'
+alias qbit_settings='cd $HOME/.var/app/org.qbittorrent.qBittorrent/data/qBittorrent'
 
 alias play_movie='~/Scripts/play_video_with_sub.sh'
-
 alias vim='nvim'
-
 alias ddf='df -h | head -1 ; df -h | grep "/dev/"'
-
 alias todo='vim ~/Desktop/todo.md'
-
-# New media backend
-alias zref='sudo env ZYPP_CURL2=1 zypper ref'
-# Parallel downloads
-alias zdup='sudo env ZYPP_PCK_PRELOAD=1 zypper dup'
-
-alias script='/home/thr/Scripts/run_script.sh'
-
-alias check_hashes='/home/thr/Scripts/check_hashes.sh'
-
-# alias inútil, só apertar gc -> c
-# alias ydf='cd $home/.config/; yazi'
-
-## ---- Configs
-
-
+alias script='$HOME/Scripts/run_script.sh'
+alias check_hashes='$HOME/Scripts/check_hashes.sh'
 
 

@@ -46,10 +46,11 @@ return {
                 },
                 float = { border = border },
             })
+
             -- ----------------------------------------------------------------------------------------------------------------
 
             lspconfig.lua_ls.setup({
-                -- handlers = handlers,
+                handlers = handlers,
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -60,26 +61,31 @@ return {
                 }
             })
 
+            -- ----------------------------------------------------------------------------------------------------------------
+
             lspconfig.pyright.setup({
-                -- handlers = handlers,
+                handlers = handlers,
                 capabilities = capabilities,
                 filetypes = { "python" },
-                settings = {
-                    python = {
-                        pythonPath = "./venv/bin/python",
-                        venvPath = "./venv"
-                    }
-                }
+                on_attach = function(client, bufnr)
+                    client.config.settings.python.pythonPath = vim.g.python3_host_prog  -- ou o caminho específico do seu venv
+                    client.notify("workspace/didChangeConfiguration")  -- para atualizar a configuração
+                    return true
+                end
             })
 
+            -- ----------------------------------------------------------------------------------------------------------------
 
             lspconfig.clangd.setup({})
 
             lspconfig.bashls.setup({
-                -- handlers = handlers,
+                handlers = handlers,
                 capabilities = capabilities,
                 filetypes = { "sh" }
             })
+
+            -- ----------------------------------------------------------------------------------------------------------------
+
         end
     }
 }
