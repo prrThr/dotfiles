@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "0ade1aa39aef10d4",
+        "id": "6ac96d2061f6bd6c",
         "type": "tabs",
         "children": [
           {
-            "id": "01a76090aa8d1753",
+            "id": "59c7e645a579569b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9semestre/tcc-1.md",
+                "file": "como_rodar_lwjgl.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tcc-1"
+              "title": "como_rodar_lwjgl"
+            }
+          },
+          {
+            "id": "16ef5b60667f96c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computação_Gráfica.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Computação_Gráfica"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -53,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "descar",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,17 +158,27 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Infra/noc-docs.md",
+                "file": "Anotações/sist_distrib.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of noc-docs"
+              "title": "Outline of sist_distrib"
+            }
+          },
+          {
+            "id": "5f5f948a849a040a",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -171,44 +196,41 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "01a76090aa8d1753",
+  "active": "16ef5b60667f96c4",
   "lastOpenFiles": [
-    "Logs/Logs Gerais.md",
-    "To-Do.md",
-    "Geral.md",
-    "teste_headers.md",
-    "Relatórios.md",
-    "Implantação_NOC.md",
-    "docs_NocClient.md",
-    "Conexões.md",
+    "Computação_Gráfica.md",
+    "como_rodar_lwjgl.md",
+    "sistemas-distribuidos/Livros/Understanding_Distributed_Systems.pdf",
+    "computacao-grafica/Slides/Aula1-Intro.pdf",
+    "computacao-grafica/Slides/Aula2-Bresenham.pdf",
+    "Aula2-Bresenham.pdf",
+    "sistemas-distribuidos/Livros/Distributed_Systems.pdf",
+    "Anotações/como_rodar_lwjgl.md",
+    "Anotações/sist_distrib.md",
     "Comandos.md",
-    "Infra/Jasper.md",
-    "Learning/BdToTicket.md",
-    "Learning",
-    "Postgres.md",
-    "atualizar_proxies.md",
-    "Termos.md",
-    "Servidores_STI.md",
     "Repasse.md",
-    "Contatos.md",
-    "fix_memory_leak.md",
-    "Otobo_container.md",
-    "Digitro/migracao_GCP_OCI.md",
-    "jasper_cleber/ListaTTv2.jrxml",
-    "jasper_cleber/LISTATTv2.jrxml",
-    "jasper_cleber/TOP15_PIOR_SLA.sql",
-    "jasper_cleber/deletar.sql",
-    "jasper_cleber/main_beautified.jrxml",
-    "jasper_cleber/main.jrxml",
-    "jasper_cleber/deletar_jrxml.txt",
-    "jasper_cleber.7z",
-    "jasper_cleber/verificacoes.md",
-    "jasper_cleber/BD_Zabbix.png",
-    "jasper_cleber",
+    "To-Do.md",
     "Resoluções.md",
-    "Infra/noc-docs.md",
-    "Preventiva.md",
+    "Geral.md",
+    "Digitro/PM_RJ_Deletar_depois.txt",
     "zoxide_fzf.md",
-    "Untitled.md"
+    "Termos.md",
+    "Templates mensagens.md",
+    "temp.md",
+    "Dualidade - Banco de Dados.md",
+    "docs_NocClient.md",
+    "Contatos.md",
+    "Conexões.md",
+    "Clientes/brigada_militar.md",
+    "Digitro/oracle.md",
+    "Logs/Logs_gerais.md",
+    "General Logs.md",
+    "Relatórios.md",
+    "Clientes/hosts_PCAL.md",
+    "Clientes/zabbix_brigada.md",
+    "Digitro/migracao_GCP_OCI.md",
+    "Clientes/unimed.md",
+    "Logs",
+    "4913"
   ]
 }

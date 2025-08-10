@@ -1,4 +1,13 @@
 {
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
+    }
+  ],
   "workspace:close": [
     {
       "modifiers": [
@@ -105,24 +114,6 @@
         "Mod"
       ],
       "key": "`"
-    }
-  ],
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "E"
-    }
-  ],
-  "obsidian-minimal-settings:toggle-minimal-focus-mode": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "H"
     }
   ]
 }
