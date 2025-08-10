@@ -18,12 +18,13 @@ sudo zypper in alacritty bat fastfetch fzf git glow htop mpv stow tmux zoxide
 - Inkscape `org.inkscape.Inkscape`
 - Thunderbird `org.mozilla.Thunderbird`
 - qBittorrent `org.qbittorrent.qBittorrent`
-- Scilab `org.scilab.Scilab`
 
 ### Others
 - [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) (.tar.gz)
 - [Node/npm](https://nodejs.org/en/download) (script)
-- [tldr](https://tldr.sh/) (npm)
+- [tldr](https://github.com/tldr-pages/tldr) (pip, venv needed)
+- [Jackett](https://github.com/Jackett/Jackett) (docker)
+- [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) (docker)
 
 
 ## Installation
