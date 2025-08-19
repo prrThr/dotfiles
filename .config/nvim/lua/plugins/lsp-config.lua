@@ -76,7 +76,10 @@ return {
 
             -- ----------------------------------------------------------------------------------------------------------------
 
-            lspconfig.clangd.setup({})
+            lspconfig.clangd.setup({
+                handlers = handlers,
+                capabilities = capabilities,
+            })
 
             lspconfig.bashls.setup({
                 handlers = handlers,

@@ -47,12 +47,12 @@ alias contasVagas="bat ~/Documents/Work/ContasVagas.md"
 alias adicionarVaga="$edit ~/Documents/Work/ContasVagas.md"
 
 # Show how chmod works
-alias chmod'?'="$show ~/Documents/Notes/chmod.md"
+alias chmod'?'="$show ~/Documents/Notes_OBSOLETE/chmod.md"
 
 # Open notes | -p returning broken format
-alias notes="$show ~/Documents/Notes/notes.md"
+alias notes="$show ~/Documents/Notes_OBSOLETE/notes.md"
 # Edit notes
-alias editNotes="nvim ~/Documents/Notes/notes.md"
+alias editNotes="nvim ~/Documents/Notes_OBSOLETE/notes.md"
 
 alias desktop1='cd $HOME/.local/share/applications'
 alias desktop2='cd /usr/share/applications'
