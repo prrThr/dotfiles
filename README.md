@@ -2,30 +2,29 @@
 
 ### System packages
 ```
-sudo zypper in alacritty bat fastfetch fzf git glow htop mpv stow tmux zoxide
+sudo zypper in alacritty bat fastfetch fzf git glow htop mpv neovim qalculate stow tmux zoxide
 ```
 
 ### Appimages
-- [Obsidian](https://obsidian.md/download)
 - [Insomnia](https://docs.insomnia.rest/insomnia/install)
+- [Obsidian](https://obsidian.md/download)
 
 ### Flatpaks
 - Discord `com.discordapp.Discord`
-- OBS `com.obsproject.Studio`
 - Firefox `org.mozilla.firefox`
-- Spotify `com.spotify.Client`
 - GIMP `org.gimp.GIMP`
 - Inkscape `org.inkscape.Inkscape`
-- Thunderbird `org.mozilla.Thunderbird`
+- OBS `com.obsproject.Studio`
 - qBittorrent `org.qbittorrent.qBittorrent`
+- Spotify `com.spotify.Client`
+- Thunderbird `org.mozilla.Thunderbird`
 
 ### Others
+- [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) (docker)
+- [Jackett](https://github.com/Jackett/Jackett) (docker)
 - [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) (.tar.gz)
 - [Node/npm](https://nodejs.org/en/download) (script)
 - [tldr](https://github.com/tldr-pages/tldr) (pip, venv needed)
-- [Jackett](https://github.com/Jackett/Jackett) (docker)
-- [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) (docker)
-
 
 ## Installation
 
