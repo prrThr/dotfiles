@@ -1,8 +1,8 @@
 return {
     "ellisonleao/gruvbox.nvim",
     lazy = false, -- Carrega o tema imediatamente
-    enabled = false, -- Disable theme
     priority = 1000, -- Garante que o tema seja carregado antes dos outros plugins
+    enabled = false, -- Disable theme
     config = function()
         require("gruvbox").setup({
             terminal_colors = true,
