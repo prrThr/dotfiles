@@ -2,7 +2,7 @@
 
 ### System packages
 ```
-sudo apt install git stow alacritty tmux bat glow htop
+sudo apt install alacritty bat git htop kdeconnect mpv stow tmux vlc
 ```
 
 ### Appimages
