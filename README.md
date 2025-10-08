@@ -11,7 +11,6 @@ sudo zypper in alacritty bat fastfetch fzf git glow htop mpv neovim qalculate st
 
 ### Flatpaks
 - Discord `com.discordapp.Discord`
-- Firefox `org.mozilla.firefox`
 - GIMP `org.gimp.GIMP`
 - Inkscape `org.inkscape.Inkscape`
 - OBS `com.obsproject.Studio`
