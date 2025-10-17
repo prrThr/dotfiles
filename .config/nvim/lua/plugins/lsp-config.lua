@@ -16,7 +16,6 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
@@ -48,7 +47,7 @@ return {
             })
             -- ----------------------------------------------------------------------------------------------------------------
 
-            lspconfig.lua_ls.setup({
+            vim.lsp.config('lua_ls.setup', {
                 handlers = handlers,
                 settings = {
                     Lua = {
@@ -60,7 +59,7 @@ return {
                 }
             })
 
-            lspconfig.pyright.setup({
+            vim.lsp.config('pyright', {
                 handlers = handlers,
                 capabilities = capabilities,
                 filetypes = { "python" },
@@ -73,18 +72,12 @@ return {
             })
 
 
-            lspconfig.clangd.setup({
+            vim.lsp.config('clangd', {
                 handlers = handlers,
                 capabilities = capabilities,
             })
 
-            lspconfig.rust_analyzer.setup({
-                -- Server-specific settings. See `:help lsp-quickstart`
-                settings = {
-                    ['rust-analyzer'] = {},
-                },
-            })
-            lspconfig.bashls.setup({
+            vim.lsp.config('bashls', {
                 handlers = handlers,
                 capabilities = capabilities,
                 filetypes = { "sh" }
