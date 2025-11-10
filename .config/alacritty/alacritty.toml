@@ -11,6 +11,9 @@ decorations = "Full" # Full | None
 padding.x = 10
 padding.y = 10
 
+[cursor]
+style = { shape = "Block", blinking = "On" }
+
 [font]
 size = 12
 

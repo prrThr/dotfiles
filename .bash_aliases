@@ -23,6 +23,9 @@ alias bat='batcat'
 alias firefox_profile='cd $HOME/.var/app/org.mozilla.firefox/.mozilla/firefox/7mub91qj.default-release/chrome'
 alias vim='nvim'
 alias todo='nvim ~/Desktop/todo.md'
+alias theme_light='$HOME/dotfiles/change_theme.sh light'
+alias theme_dark='$HOME/dotfiles/change_theme.sh dark'
+alias cpPwd="pwd | xclip -selection clipboard"
 
 # -----------------------------------------------------------------
 # My prompt
