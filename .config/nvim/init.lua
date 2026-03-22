@@ -13,5 +13,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lazy").setup("plugins")
--- require("lazy").setup("plugins", { concurrency = 1 })
 require("keybinds")

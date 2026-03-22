@@ -20,7 +20,6 @@ return {
             capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
             -- Adding borders to floating windows ---------------------------------------------------------------------------
-            -- Specify how the border looks like
             local border = {
                 { '┌', 'FloatBorder' },
                 { '─', 'FloatBorder' },
@@ -45,9 +44,9 @@ return {
                 },
                 float = { border = border },
             })
-            -- ----------------------------------------------------------------------------------------------------------------
+            -- ---------------------------------------------------------------------------------------------------------------- 
 
-            vim.lsp.config('lua_ls.setup', {
+            vim.lsp.config('lua_ls', {
                 handlers = handlers,
                 settings = {
                     Lua = {
@@ -59,22 +58,23 @@ return {
                 }
             })
 
+            -- ---------------------------------------------------------------------------------------------------------------- 
+
             vim.lsp.config('pyright', {
                 handlers = handlers,
                 capabilities = capabilities,
                 filetypes = { "python" },
-                settings = {
-                    python = {
-                        pythonPath = "./venv/bin/python",
-                        venvPath = "./venv"
-                    }
-                }
+                on_attach = function(client, bufnr)
+                    client.config.settings.python.pythonPath = vim.g.python3_host_prog  -- ou o caminho específico do seu venv
+                    client.notify("workspace/didChangeConfiguration")  -- para atualizar a configuração
+                    return true
+                end
             })
-
 
             vim.lsp.config('clangd', {
                 handlers = handlers,
                 capabilities = capabilities,
+                filetypes = { "c", "cpp", "objc", "objcpp" }
             })
 
             vim.lsp.config('bashls', {

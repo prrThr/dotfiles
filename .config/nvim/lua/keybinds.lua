@@ -46,12 +46,10 @@ map('n', '<C-o>', '<Cmd>Telescope find_files<CR>', opts)
 map('n', '<leader>fg', '<Cmd>Telescope live_grep<CR>', opts)
 
 -- ---------------- NEO-TREE  ---------------- --
--- vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
+-- vim.keymap.set('n', '<C-M-n>', ':Neotree filesystem reveal right<CR>', {})
 vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>', {})
 
 -- ---------------- LSP  ---------------- --
--- vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-
 vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = "rounded"}) end, {})
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set({'n'}, '<leader>ca', vim.lsp.buf.code_action, {})
@@ -81,13 +79,8 @@ for key, func in pairs(keymap) do
   vim.keymap.set(modes, key, func)
 end
 
--- ---------------- NEOSCROLL DEPRECATED ----- --
---map('n', '<C-u>', '<Cmd>lua require("neoscroll").scroll(-vim.wo.scroll, true, 250)<CR>', opts)
---map('n', '<C-d>', '<Cmd>lua require("neoscroll").scroll(vim.wo.scroll, true, 250)<CR>', opts)
---map('n', '<C-b>', '<Cmd>lua require("neoscroll").scroll(-vim.api.nvim_win_get_height(0), true, 450)<CR>', opts)
---map('n', '<C-f>', '<Cmd>lua require("neoscroll").scroll(vim.api.nvim_win_get_height(0), true, 450)<CR>', opts)
---map('n', '<C-y>', '<Cmd>lua require("neoscroll").scroll(-0.10, false, 100)<CR>', opts)
---map('n', '<C-e>', '<Cmd>lua require("neoscroll").scroll(0.10, false, 100)<CR>', opts)
---map('n', 'zt', '<Cmd>lua require("neoscroll").zt(250)<CR>', opts)
---map('n', 'zz', '<Cmd>lua require("neoscroll").zz(250)<CR>', opts)
---map('n', 'zb', '<Cmd>lua require("neoscroll").zb(250)<CR>', opts)
+-- ---------------- Vertical Split------------ --
+vim.keymap.set('n', '<leader>vs', ':vsplit<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>hs', ':split<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>nhs', ':nohlsearch<CR>', { noremap = true, silent = true })
+

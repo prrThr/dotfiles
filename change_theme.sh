@@ -17,5 +17,7 @@ fi
 
 xfdesktop --reload
 xfwm4 --replace &
-echo "Theme changed!"
+
+echo "Theme changed! To sync firefox theme go to:"
+echo "Settings Manager > Desktop settings > Applications"
 

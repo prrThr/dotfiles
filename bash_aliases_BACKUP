@@ -43,20 +43,27 @@ alias checkversions='$HOME/dotfiles/check_versions.sh'
 GREEN='\[\033[01;32m\]'
 BLUE='\[\033[01;34m\]'
 YELLOW='\[\033[01;33m\]'
-DARK_YELLOW="\[\033[33m\]"
-LIGHT_BLUE="\[\033[01;36m\]"
-ORANGE="\[\033[01;38;5;214m\]"
+#DARK_YELLOW="\[\033[33m\]"
+#LIGHT_BLUE="\[\033[01;36m\]"
+#ORANGE="\[\033[01;38;5;214m\]"
 RESET='\[\033[00m\]'
 
-function parse_git_dirty {
-  [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
-}
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
-}
 
+if [ -f /etc/bash_completion.d/git-prompt ]; then
+    source /etc/bash_completion.d/git-prompt
+fi
 
-export PS1="[${GREEN}\u${RESET}@${GREEN}\h ${BLUE}\W${ORANGE}\$(parse_git_branch)${RESET}]$ "
+export GIT_PS1_SHOWDIRTYSTATE=1       # '*' modified '+' staged
+export GIT_PS1_SHOWUNTRACKEDFILES=0   # '*' untracked
+export GIT_PS1_STATESEPARATOR=''      # Remove space between indicators
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}['"$GREEN"'\u'"$RESET"'@'"$GREEN"'\h'"$RESET"' '"$BLUE"'\W'"$RESET"']'"$YELLOW"'$(__git_ps1 "(%s)")'"$RESET"'$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}[\u@\h \W]$(__git_ps1 " (%s)")$ '
+fi
+
+unset color_prompt force_color_prompt
 
 # -----------------------------------------------------------------
 

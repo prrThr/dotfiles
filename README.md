@@ -2,7 +2,7 @@
 
 ### System packages
 ```
-sudo apt install alacritty bat git htop kdeconnect mpv stow tmux vlc
+sudo apt install alacritty bat git htop kdeconnect mpv stow tmux vlc zoxide
 ```
 
 ### Appimages
@@ -19,7 +19,7 @@ sudo apt install alacritty bat git htop kdeconnect mpv stow tmux vlc
 - [Zoxide](https://github.com/ajeetdsouza/zoxide) (script)
 - [Node/npm](https://nodejs.org/en/download) (script)
 - [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#installation) (git clone)
-- [tldr](https://tldr.sh/) (npm)
+- [tldr](https://tldr.sh/) (pip)
 
 ## Installation
 

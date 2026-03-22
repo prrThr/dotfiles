@@ -5,8 +5,8 @@ return {
   },
   config = function()
     vim.g.barbar_auto_setup = false
+    vim.o.showtabline = 2 -- 0 = Tabs hidden per default
 
-    -- Função para alternar a visibilidade da linha de abas
     function ToggleBarbar()
       local showtabline = vim.o.showtabline
       if showtabline == 2 then

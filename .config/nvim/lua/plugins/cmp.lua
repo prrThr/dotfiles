@@ -24,10 +24,12 @@ return {
           ['<C-e>'] = cmp.mapping.abort(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
         }),
+
         window = {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
         },
+
         sources = {
           { name = "nvim_lsp" },
           { name = "buffer" },
