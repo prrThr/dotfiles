@@ -1,39 +1,49 @@
 #!/bin/bash
 
-NVIM_BIN="/opt/nvim/nvim"
+NVIM_PATH="$HOME/AppImages/nvim-linux-x86_64.appimage"
+APPIMAGES="$HOME/AppImages"
 
-if [[ ! -x "$NVIM_BIN" ]]; then
-  echo "❌ Neovim não encontrado em $NVIM_BIN"
-  exit 1
-fi
+get_current_version() {
+    "$NVIM_PATH" --version | head -n 1 | awk '{print $2}'
+}
 
-INSTALLED_VERSION=$("$NVIM_BIN" --version | head -n 1 | grep -oP 'v\d+\.\d+\.\d+')
-echo "📦 Versão instalada do Neovim: $INSTALLED_VERSION"
+get_latest_version() {
+    latest_version=$(curl -s https://api.github.com/repos/neovim/neovim/releases/latest | \
+        jq -r '.tag_name' | \
+        grep -v 'nightly' | \
+        grep -v 'test')
 
-LATEST_VERSION=$(curl -s https://api.github.com/repos/neovim/neovim/releases |
-  jq -r '[.[] | select(.prerelease == false and .draft == false)][0].tag_name')
+    echo "$latest_version"
+}
 
-echo "🌐 Última versão estável disponível: $LATEST_VERSION"
+download_latest_appimage() {
+    latest_version="$1"
+    download_url="https://github.com/neovim/neovim/releases/download/$latest_version/nvim-linux-x86_64.appimage"
 
-if [[ "$INSTALLED_VERSION" == "$LATEST_VERSION" ]]; then
-  echo "✅ Você já está usando a versão mais recente do Neovim."
-  exit 0
+    echo "Downloading Neovim $latest_version..."
+    curl -L "$download_url" -o "$NVIM_PATH"
+    chmod +x "$NVIM_PATH"
+    echo "Neovim updated to $latest_version."
+}
+
+current_version=$(get_current_version)
+latest_version=$(get_latest_version)
+
+echo "Current Neovim version: $current_version"
+echo "Latest stable Neovim version: $latest_version"
+
+if [[ "$current_version" == "$latest_version" ]]; then
+    echo "Neovim is up to date."
 else
-  echo "🔄 Há uma nova versão disponível do Neovim."
-  read -p "Deseja baixar e substituir a versão atual por $LATEST_VERSION? (s/N): " confirm
-  if [[ "$confirm" =~ ^[sS]$ ]]; then
-    echo "⬇️ Baixando Neovim $LATEST_VERSION..."
+    echo "Neovim is outdated. Would you like to update to the latest version? (y/n)"
 
-    TMP_FILE=$(mktemp)
-    curl -L "https://github.com/neovim/neovim/releases/download/${LATEST_VERSION}/nvim.appimage" -o "$TMP_FILE"
-    chmod +x "$TMP_FILE"
-    
-    echo "📁 Substituindo $NVIM_BIN com a nova versão..."
-    sudo mv "$TMP_FILE" "$NVIM_BIN"
-    
-    echo "✅ Atualização concluída."
-  else
-    echo "🚫 Atualização cancelada."
-  fi
+    read -rp "Enter choice: " user_choice
+    if [[ "$user_choice" == "y" || "$user_choice" == "Y" ]]; then
+        echo "Renaming the outdated Neovim to 'old_nvim-linux-x86_64.appimage'..."
+        mv "$NVIM_PATH" "$APPIMAGES/old_nvim-linux-x86_64.appimage"
+        download_latest_appimage "$latest_version"
+    else
+        echo "Skipping update."
+    fi
 fi
 
