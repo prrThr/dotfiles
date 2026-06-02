@@ -1,6 +1,9 @@
 ## TODO
 # Falta corrigir o diretório de anotações
 
+alias rick_and_morty_s07='mpv --playlist=/home/thr/Torrents/rick_and_morty_s07/rick_and_morty_playlist.m3u'
+alias tcc='cd /home/thr/Faculdade/10semestre/tcc2/ibr-etl'
+
 ### Settings ----------------------------------------------------------------------------
 alias rm='rm -i'
 alias mv='mv -i'
