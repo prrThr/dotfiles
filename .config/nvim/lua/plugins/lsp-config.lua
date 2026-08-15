@@ -20,7 +20,7 @@ return {
             capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
             -- Adding borders to floating windows ---------------------------------------------------------------------------
-            -- Specify how the border looks like
+            -- Floating window border
             local border = {
                 { '┌', 'FloatBorder' },
                 { '─', 'FloatBorder' },
@@ -32,24 +32,32 @@ return {
                 { '│', 'FloatBorder' },
             }
 
-            -- Add the border on hover and on signature help popup window
-            local handlers = {
-                ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
-                ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
-            }
+            -- Hover
+            vim.keymap.set("n", "K", function()
+                vim.lsp.buf.hover({
+                    border = border,
+                })
+            end)
 
-            -- Add border to the diagnostic popup window
+            -- Signature help
+            vim.keymap.set("i", "<C-k>", function()
+                vim.lsp.buf.signature_help({
+                    border = border,
+                })
+            end)
+
+            -- Diagnostic popup
             vim.diagnostic.config({
                 virtual_text = {
-                    prefix = '■ ', -- Could be '●', '▎', 'x', '■', , 
+                    prefix = '■ ',
                 },
-                float = { border = border },
-            })
-
+                float = {
+                    border = border,
+                },
+            }) 
             -- ----------------------------------------------------------------------------------------------------------------
 
             vim.lsp.config('lua_ls',{
-                handlers = handlers,
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -63,12 +71,11 @@ return {
             -- ----------------------------------------------------------------------------------------------------------------
 
             vim.lsp.config('pyright', {
-                handlers = handlers,
                 capabilities = capabilities,
                 filetypes = { "python" },
                 on_attach = function(client, bufnr)
                     client.config.settings.python.pythonPath = vim.g.python3_host_prog  -- ou o caminho específico do seu venv
-                    client.notify("workspace/didChangeConfiguration")  -- para atualizar a configuração
+                    client:notify("workspace/didChangeConfiguration") -- para atualizar a configuração
                     return true
                 end
             })
@@ -76,12 +83,10 @@ return {
             -- ----------------------------------------------------------------------------------------------------------------
 
             vim.lsp.config('clangd', {
-                handlers = handlers,
                 capabilities = capabilities,
             })
 
             vim.lsp.config('bashls', {
-                handlers = handlers,
                 capabilities = capabilities,
                 filetypes = {"sh"}
             })
