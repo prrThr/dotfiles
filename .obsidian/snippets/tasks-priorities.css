@@ -1,0 +1,48 @@
+/* Colocar em .obsidian/snippets/tasks-priorities.css */
+
+/* Oculta o emoji original da prioridade */
+.task-priority {
+    font-size: 0;
+}
+
+/* Container que contém descrição + prioridade */
+.tasks-list-text {
+    display: inline-flex;
+    align-items: baseline;
+}
+
+/* Coloca a prioridade antes da descrição */
+.tasks-list-text .task-priority {
+    order: -1;
+    margin-right: 0.4rem;
+}
+
+/* Tamanho do nosso emoji */
+.task-priority::before {
+    font-size: 1rem;
+}
+
+/* Highest */
+.task-priority[data-task-priority="highest"]::before {
+    content: "🔴";
+}
+
+/* High */
+.task-priority[data-task-priority="high"]::before {
+    content: "🟠";
+}
+
+/* Medium */
+.task-priority[data-task-priority="medium"]::before {
+    content: "🟡";
+}
+
+/* Low */
+.task-priority[data-task-priority="low"]::before {
+    content: "🟢";
+}
+
+/* Lowest */
+.task-priority[data-task-priority="lowest"]::before {
+    content: "🔵";
+}

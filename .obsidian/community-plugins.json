@@ -1,6 +1,7 @@
 [
-  "obsidian-vimrc-support",
   "obsidian-minimal-settings",
   "obsidian-style-settings",
+  "obsidian-tasks-plugin",
+  "obsidian-excalidraw-plugin",
   "obsidian-git"
 ]
