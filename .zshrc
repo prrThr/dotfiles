@@ -80,3 +80,6 @@ get_terminal() {
 #  fi
 #fi
 
+
+# opencode
+export PATH=/home/thr/.opencode/bin:$PATH
