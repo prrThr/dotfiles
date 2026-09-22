@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pyright", "clangd", "bashls" }
+                ensure_installed = { "pyright", "clangd", "bashls" }
             })
         end
     },
@@ -57,16 +57,16 @@ return {
             }) 
             -- ----------------------------------------------------------------------------------------------------------------
 
-            vim.lsp.config('lua_ls',{
-                settings = {
-                    Lua = {
-                        diagnostics = {
-                            -- Get the language server to recognize the 'vim' global
-                            globals = { 'vim' }
-                        }
-                    }
-                }
-            })
+            -- vim.lsp.config('lua_ls',{
+            --     settings = {
+            --         Lua = {
+            --             diagnostics = {
+            --                 -- Get the language server to recognize the 'vim' global
+            --                 globals = { 'vim' }
+            --             }
+            --         }
+            --     }
+            -- })
 
             -- ----------------------------------------------------------------------------------------------------------------
 
