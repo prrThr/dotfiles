@@ -1,4 +1,3 @@
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZSH=~/.oh-my-zsh
 
@@ -48,6 +47,9 @@ export NVM_DIR="$HOME/.config/nvm"
 eval "$(zoxide init zsh)"
 
 # fzf
+
+#unset FZF_DEFAULT_OPTS
+
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -83,3 +85,4 @@ get_terminal() {
 
 # opencode
 export PATH=/home/thr/.opencode/bin:$PATH
+
