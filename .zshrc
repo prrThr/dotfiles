@@ -6,6 +6,11 @@ export LC_CTYPE=en_US.UTF-8
 export LC_MESSAGES=en_US.UTF-8
 export LC_ALL=en_US.UTF-8 perl
 
+# SSH Agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SSH_ASKPASS=/usr/bin/ksshaskpass
+export SSH_ASKPASS_REQUIRE=prefer
+
 
 # Liked themes (already installed)
 # af-magic,af-magic2 (my customized theme), kennethreitz, kphoen, mortalscumbag, murilasso

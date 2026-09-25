@@ -5,8 +5,8 @@ TERM = "xterm-256color"
 
 [window]
 class = { general = "org.alacritty.Alacritty", instance = "org.alacritty.Alacritty" }
-opacity = 0.99  # 1.00 ou 0.95
-blur = true     # false
+opacity = 1.00  # 1.00 ou 0.95
+blur = false
 decorations = "None" # "None" or "Full"
 padding.x = 10
 padding.y = 5
